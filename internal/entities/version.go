@@ -3,9 +3,10 @@ package entities
 import (
 	"errors"
 	"fmt"
-	"github.com/maykonlf/semver-cli/internal/enum/phases"
-	"github.com/maykonlf/semver-cli/internal/utils/str"
 	"regexp"
+
+	"github.com/adlandh/semver-cli/internal/enum/phases"
+	"github.com/adlandh/semver-cli/internal/utils/str"
 )
 
 type Version struct {

@@ -3,7 +3,7 @@ package commands
 import (
 	"os"
 
-	"github.com/maykonlf/semver-cli/internal/entities"
+	"github.com/adlandh/semver-cli/internal/entities"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 )
@@ -31,7 +31,7 @@ func (i *InitCommand) Cmd() *cobra.Command {
 	return i.cmd
 }
 
-func (i *InitCommand) Execute(cmd *cobra.Command, args []string) error {
+func (i *InitCommand) Execute(*cobra.Command, []string) error {
 	return i.Handle()
 }
 

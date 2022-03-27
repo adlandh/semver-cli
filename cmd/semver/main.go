@@ -2,10 +2,11 @@ package main
 
 import (
 	"fmt"
-	"github.com/maykonlf/semver-cli/internal/commands"
+	"os"
+
+	"github.com/adlandh/semver-cli/internal/commands"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
-	"os"
 )
 
 var (

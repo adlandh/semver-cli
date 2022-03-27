@@ -2,8 +2,9 @@ package commands
 
 import (
 	"fmt"
-	"github.com/maykonlf/semver-cli/internal/entities"
-	"github.com/maykonlf/semver-cli/internal/enum/phases"
+
+	"github.com/adlandh/semver-cli/internal/entities"
+	"github.com/adlandh/semver-cli/internal/enum/phases"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 )
@@ -69,7 +70,7 @@ func isAlreadyReleased() bool {
 	return viper.GetInt("alpha") == 0 && viper.GetInt("beta") == 0 && viper.GetInt("rc") == 0
 }
 
-func (u *UpVersionCommand) Execute(cmd *cobra.Command, args []string) error {
+func (u *UpVersionCommand) Execute(_ *cobra.Command, args []string) error {
 	version, err := entities.NewVersion(viper.GetString("release"))
 	if err != nil {
 		return fmt.Errorf("failed to load release version: %v", err)
